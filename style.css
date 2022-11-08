@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "chewy";
+    src: url("Fonts/Chewy-Regular.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "sunny";
+    src: url("Fonts/SunnyspellsRegular-MV9ze.otf") format("opentype")
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(#E5D3B3, #B99976);
+}
+
+.title {
+    text-align: center;
+    color: #8b714f;
+    font-family: sunny, monospace;
+    font-size: 5em;
+}
+
+.game-information {
+    text-align: center;
+    color: white;
+    font-family: chewy, monospace;
+    font-size: 2em;
+}
