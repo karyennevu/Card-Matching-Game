@@ -8,7 +8,6 @@
     src: url("Fonts/SunnyspellsRegular-MV9ze.otf") format("opentype")
 }
 
-
 * {
     box-sizing: border-box;
 }
@@ -21,6 +20,24 @@ html {
 body {
     margin: 0;
     background: radial-gradient(#E5D3B3, #B99976);
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+
+
+
+.fa-volume-high.visible {
+    color: #8b714f;
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+    position: fixed;
+}
+
+.fa-volume-xmark.visible {
+    color: #8b714f;
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+    position: fixed;
 }
 
 .title {
@@ -37,12 +54,16 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
     font-family: sunny, monospace;
-    color: #8b714f;
+    color: #b1926b;
+    flex-direction: column;
+}
+
+.overlay-text-small {
+    font-size: .4em;
 }
 
 .overlay-text.visible {
@@ -54,8 +75,6 @@ body {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 15px;
-    /*margin: 50px;*/
-    /*may be unecessary*/
     justify-content: center;
     perspective: 500px;
 }
@@ -66,6 +85,8 @@ body {
     color: white;
     font-family: chewy, monospace;
     font-size: 3em;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card {
@@ -138,6 +159,31 @@ body {
     animation: bounce 2s ease infinite;
 }
 
+footer {
+    color: white;
+    font-family: chewy;
+    padding-top: 1em;
+    padding-left: 1em;
+    font-size: .8em;
+}
+
+a {
+    color: #8b714f;
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+
+    to {
+        background-color: rgba(50, 39, 20, 0.8);
+        font-size: 10em;
+    }
+
+}
+
 @keyframes bounce {
     70% {
         transform: translateY(0%);
@@ -165,5 +211,28 @@ body {
 
     100% {
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media (max-width: 450px) {
+    .game-container {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .game-information-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 300px) {
+    .game-container {
+        grid-template-columns: repeat(1, auto);
     }
 }

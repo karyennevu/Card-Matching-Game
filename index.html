@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" async></script>
+    <!--async means that we want the html to load js file at the same time as the html loads -->
+    <title>Relax & Match</title>
+</head>
+
+<body>
+    <i class="fa-solid fa-volume-high visible fa-2x" id="music-button"></i>
+    <i class="fa-solid fa-volume-xmark fa-2x" id="mute-button"></i>
+    <h1 class="title">Relax & Match</h1>
+    <div class="overlay-text visible">
+        Click to Start
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        GAME OVER
+        <span class="overlay-text-small">Click To Play Again</span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        VICTORY!
+        <span class="overlay-text-small">Click To Play Again</span>
+    </div>
+    <div class="game-container">
+        <div class="game-information-container">
+            Time: <span id="time">100</span>
+            Flips: <span id="flips">0</span>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType1.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType1.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType2.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType2.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType10.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType10.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType4.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType4.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType5.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType5.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType8.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType8.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType7.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType7.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType12.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="card-back-img" src="Images\cardback.jpg">
+                <img class="flower" src="Images\flower.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value" src="Images\CardType12.png">
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <p>Music by <a
+            href="https://pixabay.com/users/lofi_hour-28600719/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=114852">CMT8</a>
+        from <a
+            href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=114852">Pixabay</a>
+        / Images by <a
+            href="https://www.freepik.com/free-vector/hand-drawn-kawaii-objects-collection_26230954.htm#query=kawaii&position=5&from_view=keyword">Freepik</a>
+        / Cursors by <a href="http://www.rw-designer.com/cursor-set/uldonutskawaiimd2">ツ Mimi Destino ♡</a>
+    </p>
+</footer>
+
+</html>
