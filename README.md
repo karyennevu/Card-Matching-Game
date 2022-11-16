@@ -1,3 +1,5 @@
-# Card-Matching-Game (Work In Progress)
+# Relax&Match (Work In Progress)
 
-A cute and cozy card matching game, because it is simple yet fun and it was a great learning opportunity for me!
+A cute and cozy card matching game with lo-fi music and rain noise in the background. 
+
+It is a fun game and it a great learning opportunity for me!
